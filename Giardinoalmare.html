@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Giardino al Mare</title>
+  <style>
+    :root{
+      --brand:#0b5394;
+      --accent:#049a8c;
+      --bg:#f7f7f8;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --ok:#0ea5e9;
+      --warn:#f59e0b;
+    }
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;line-height:1.45}
+    .container{max-width:980px;margin:auto;padding:20px}
+    header{display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between;margin-bottom:18px}
+    .brand{font-weight:800;font-size:1.25rem;color:var(--brand)}
+    .lang-toggle{display:flex;gap:8px;background:var(--card);border:1px solid #e5e7eb;border-radius:999px;padding:6px}
+    .lang-toggle button{border:0;background:transparent;padding:.5rem .8rem;border-radius:999px;cursor:pointer;color:var(--muted);font-weight:700}
+    .lang-toggle button.active{background:var(--brand);color:#fff}
+    .notice{font-size:.95rem;color:var(--muted)}
+    .grid{display:grid;gap:16px}
+    @media (min-width:760px){.grid.cols-2{grid-template-columns:1fr 1fr}}
+    section{background:var(--card);border:1px solid #e5e7eb;border-radius:14px;padding:18px}
+    h2{margin:.2rem 0 10px 0;font-size:1.15rem}
+    h3{margin:1rem 0 .5rem 0;font-size:1rem;color:var(--brand)}
+    a.button{display:inline-block;margin:.25rem .25rem .25rem 0;padding:.65rem .9rem;border-radius:10px;border:1px solid #e5e7eb;background:#fff;text-decoration:none;color:var(--brand);font-weight:700}
+    a.button:hover{box-shadow:0 1px 0 rgba(0,0,0,.06)}
+    .kbd{font-family:ui-monospace,Menlo,Consolas,monospace;background:#eef2ff;border:1px solid #c7d2fe;color:#111827;border-radius:6px;padding:.15rem .4rem;white-space:nowrap}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#ecfeff;color:#0e7490;border:1px solid #a5f3fc;font-size:.8rem;font-weight:700}
+    .rules li{margin:.4rem 0}
+    .flex{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .muted{color:var(--muted)}
+    .img-wrap{border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;background:#fff}
+    img{max-width:100%;height:auto;display:block}
+    .footer{color:var(--muted);font-size:.9rem;margin-top:18px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">🏡 Giardino al Mare — Istruzioni check-in e Manuale della Casa</div>
+      <div class="lang-toggle" aria-label="Language selector">
+        <button id="btnIT" class="active" data-lang="it" aria-pressed="true">IT</button>
+        <button id="btnEN" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </header>
+
+    <p class="notice" data-i18n="managed-by">
+      Appartamento gestito da <strong>Anna Chiara </strong>.
+    </p>
+
+    <!-- WELCOME + CHECK-IN -->
+    <section>
+      <h2 data-i18n="checkin-title">Check-in rapido</h2>
+      <div class="grid cols-2">
+        <div>
+          <h3 data-i18n="keys-title">Ritiro chiavi & accesso</h3>
+          <p data-i18n="keys-text">
+            Guarda il video per ritirare le chiavi e accedere in casa. Codice cassettina: <span class="kbd">1019</span>.
+          </p>
+          <div class="flex">
+            <a class="button" target="_blank" href="https://youtube.com/shorts/QS3FizYX7xk?feature=share" data-i18n="btn-keys-video">🎥 Video accesso in casa </a>
+            <a class="button" target="_blank" href="https://maps.app.goo.gl/ySYMZWG5AD42nDp1A" data-i18n="btn-house-map">📍 Posizione casa</a>
+          </div>
+
+          <h3 style="margin-top:14px" data-i18n="parking-title">Parcheggi</h3>
+          <p data-i18n="parking-text">
+            Parcheggio gratuito lungo la via di casa o nella via parallela alla ferrovia. A pagamento sul lungomare.
+            Rispetta sempre i divieti di sosta (anche momentanei).
+          </p>
+        </div>
+
+        <div>
+          <h3 data-i18n="wifi-title">Wi-Fi</h3>
+          <p>
+            <span class="pill">SSID</span> <span class="kbd">Giardinoalmare</span><br />
+            <span class="pill">Password</span> <span class="kbd">!GM60262929PT!</span>
+          </p>
+          <div class="flex">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HOUSE MANUAL -->
+    <section>
+      <h2 data-i18n="manual-title">Manuale della casa</h2>
+      <div class="grid cols-2">
+        <div>
+
+	  <h3 style="margin-top:14px" data-i18n="emergency-title">Se manca corrente</h3>
+	  <a class="button" target="_blank" href="https://youtube.com/shorts/W8AYAXdV8vs?feature=share" data-i18n="btn-power-video">🎥 Video ripristino corrente</a>
+
+          <h3 data-i18n="dishwasher-title">Lavastoviglie</h3>
+          <a class="button" target="_blank" href="https://youtube.com/shorts/Y_SgnqjckHE?feature=share" data-i18n="btn-dishwasher">🎥 Guida lavastoviglie</a>
+
+          <h3 style="margin-top:12px" data-i18n="washing-title">Lavatrice</h3>
+          <a class="button" target="_blank" href="https://youtube.com/shorts/7BPmsh2Usd8?feature=share" data-i18n="btn-washer">🎥 Guida lavatrice</a>
+
+	  <h3 style="margin-top:12px" data-i18n="boiler-title">Caldaia</h3>
+          <a class="button" target="_blank" href="https://youtube.com/shorts/hkAfRCm0Y1E?feature=share" data-i18n="btn-boiler">🎥 Guida caldaia</a>
+
+          <h3 style="margin-top:12px" data-i18n="sofa-title">Divano letto</h3>
+          <a class="button" target="_blank" href="https://youtu.be/CaPRaYwN2XU" data-i18n="btn-sofa">🎥 Apertura divano letto</a>
+        </div>
+
+        <div>
+          <h3 data-i18n="cot-title">Culla da campeggio</h3>
+          <a class="button" target="_blank" href="https://youtu.be/MlIp7EDtkpU" data-i18n="btn-cot">🎥 Montaggio culla</a>
+
+          <h3 style="margin-top:12px" data-i18n="heating-title">Termosifoni</h3>
+          <a class="button" target="_blank" href="https://youtube.com/shorts/HorD2oe7Szc?feature=share" data-i18n="btn-heating">🎥 Funzionamento termosifoni</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WASTE & ECOCARD -->
+    <section>
+      <h2 data-i18n="waste-title">Raccolta differenziata & EcoCard</h2>
+      <p data-i18n="waste-text">
+        Per gettare i rifiuti usa le 'isole ecologiche intelligenti' (serve la tessera <strong>EcoCard verde</strong>). Puoi usare
+        qualsiasi sacchetto. Trovi la posizione dei cestini qui sotto. Nel caso i cestini siano pieni o bloccati puoi torvarne altri 100 metri 	verso Nord (2 minuti a piedi).
+      </p>
+      <div class="flex">
+        <a class="button" target="_blank" href="https://maps.app.goo.gl/X7ANFpTCN9FQ3Htb8" data-i18n="btn-bins-pos">🗺️ Posizione cestini</a>
+        <a class="button" target="_blank" href="https://www.sangiorgioservizi.it/files/2020/11/IsoleTecnologiche/EsempioConferimento.mp4" data-i18n="btn-bins-video">🎥 Esempio conferimento</a>
+      </div>
+<h3 data-i18n="waste-guide-title" style="margin-top:14px">
+  Clicca sotto per la guida alla differenziata (Porto San Giorgio)
+</h3>
+<a class="button" target="_blank" 
+   href="https://drive.google.com/uc?export=view&id=1MuWFJkFF1HMKE57qaBqzFu9QPrMOJz6t"
+   data-i18n="waste-guide-link">
+   📄 Apri la guida alla differenziata
+</a>
+    </section>
+
+    <!-- HOUSE RULES -->
+    <section>
+      <h2 data-i18n="rules-title">Regole della casa</h2>
+      <ul class="rules">
+        <li data-i18n="rule-1">
+          Non si fuma all'interno dell'appartamento; all’esterno è consentito. Spegnere le sigarette solo nei posacenere.
+        </li>
+        <li data-i18n="rule-2">
+          Chiudere sempre l'ombrellone quando non si è in casa, di notte o in caso di maltempo.
+        </li>
+        <li data-i18n="rule-3">
+          Vietato gettare assorbenti nel WC (utilizzare l’apposito cestino).
+        </li>
+        <li data-i18n="rule-4">
+          Vietato organizzare feste o eventi.
+        </li>
+        <li data-i18n="rule-5">
+          Rispettare le comuni regole di silenzio nelle ore notturne.
+        </li>
+	<li data-i18n="rule-6">
+          Vietato gettare acqua o altri liquidi sul bbq. Coprire sempre con la copertura rossa una volta terminato l'utilizzo ed aver pulito la griglia con la spatola apposita.
+        </li>
+        <li data-i18n="rule-7">
+          Obbligatorio rispettare le regole della raccolta differenziata.
+        </li>
+      </ul>
+    </section>
+
+    <p class="footer" data-i18n="footer">
+      In caso di necessità contattaci via messaggio. Buon soggiorno!
+    </p>
+  </div>
+
+  <script>
+    // Simple i18n dictionary
+    const dict = {
+      it: {
+        "managed-by": "Appartamento gestito da <strong>Anna Chiara </strong>.",
+        "checkin-title":"Check-in rapido",
+        "keys-title":"Ritiro chiavi & accesso",
+        "keys-text":"Guarda il video per ritirare le chiavi e accedere in casa. Codice cassettina: <span class=\"kbd\">1019</span>.",
+        "btn-keys-video":"🎥 Video accesso in casa",
+        "btn-house-map":"📍 Posizione casa",
+        "parking-title":"Parcheggi",
+        "parking-text":"Parcheggio gratuito lungo la via di casa o nella via parallela alla ferrovia. A pagamento sul lungomare. Rispetta sempre i divieti di sosta (anche momentanei).",
+        "wifi-title":"Wi-Fi",
+        "btn-copy-wifi":"📋 Copia credenziali",
+        "emergency-title":"Se manca corrente",
+        "btn-power-video":"🎥 Video ripristino corrente",
+        "manual-title":"Manuale della casa",
+        "dishwasher-title":"Lavastoviglie",
+        "btn-dishwasher":"🎥 Guida lavastoviglie",
+        "washing-title":"Lavatrice",
+        "btn-washer":"🎥 Guida lavatrice",
+	"boiler-title":"Caldaia",
+        "btn-boiler":"🎥 Guida caldaia",
+        "sofa-title":"Divano letto",
+        "btn-sofa":"🎥 Apertura divano letto",
+        "cot-title":"Culla da campeggio",
+        "btn-cot":"🎥 Montaggio culla",
+        "heating-title":"Termosifoni",
+        "btn-heating":"🎥 Funzionamento termosifoni",
+        "waste-title":"Raccolta differenziata & EcoCard",
+        "waste-text":"Per gettare i rifiuti usa le 'isole ecologiche intelligenti' (serve la tessera <strong> EcoCard verde </strong>). Puoi usare qualsiasi sacchetto. Trovi la posizione dei cestini qui sotto. Nel caso i cestini siano pieni o bloccati puoi torvarne altri 100 metri 	verso Nord (2 minuti a piedi)",
+        "btn-bins-pos":"🗺️ Posizione cestini",
+        "btn-bins-video":"🎥 Esempio conferimento",
+	"waste-guide-title": "Clicca sotto per la guida alla differenziata (Porto San Giorgio)",
+	"waste-guide-link": "📄 Apri la guida per la raccolta differenziata",
+        "poster-title":"Guida alla differenziata (Porto San Giorgio)",
+        "rules-title":"Regole della casa",
+        "rule-1":"Non si fuma all'interno dell'appartamento; all’esterno è consentito. Spegnere le sigarette solo nei posacenere.",
+        "rule-2":"Chiudere sempre l'ombrellone quando non si è in casa, di notte o in caso di maltempo.",
+        "rule-3":"Vietato gettare assorbenti nel WC (utilizzare l’apposito cestino).",
+        "rule-4":"Vietato organizzare feste o eventi.",
+        "rule-5":"Rispettare le comuni regole di silenzio nelle ore notturne.",
+	"rule-6":"Vietato gettare acqua o altri liquidi sul bbq. Coprire sempre con la copertura rossa una volta terminato l'utilizzo ed aver pulito la griglia con la spatola apposita.",
+        "rule-7":"Obbligatorio rispettare le regole della raccolta differenziata.",
+        "footer":"In caso di necessità contattaci via messaggio. Buon soggiorno!"
+      },
+      en: {
+        "managed-by":"Apartment managed by <strong> Anna Chiara </strong>.",
+        "checkin-title":"Fast check-in",
+        "keys-title":"Key pickup & access",
+        "keys-text":"Watch the video to pick up the keys and enter the house. Lockbox code: <span class=\"kbd\">1019</span>.",
+        "btn-keys-video":"🎥 Lockbox video",
+        "btn-house-map":"📍 Property location",
+        "parking-title":"Parking",
+        "parking-text":"Free parking along the house street or the parallel street by the railway. Paid parking on the seafront. Always respect 	no-parking signs (including temporary ones).",
+        "wifi-title":"Wi-Fi",
+        "btn-copy-wifi":"📋 Copy Wi-Fi details",
+        "emergency-title":"If power goes out",
+        "btn-power-video":"🎥 Power restore video",
+        "manual-title":"House manual",
+        "dishwasher-title":"Dishwasher",
+        "btn-dishwasher":"🎥 Dishwasher guide",
+        "washing-title":"Washing machine",
+        "btn-washer":"🎥 Washer guide",
+	"boiler-title":"Boiler",
+        "btn-boiler":"🎥 Boiler guide",
+        "sofa-title":"Sofa bed",
+        "btn-sofa":"🎥 Open sofa bed",
+        "cot-title":"Travel cot",
+        "btn-cot":"🎥 Set up travel cot",
+        "heating-title":"Radiators",
+        "btn-heating":"🎥 Radiators guide",
+        "waste-title":"Waste sorting & EcoCard",
+        "waste-text":"To dispose of waste, use the 'smart recycling points' (you will need a <strong> green EcoCard </strong>). You can use any 	type of bag. The location of the bins is shown below. If the bins are full or blocked, you can find others 100 metres to the north (a 2-	minute walk)",
+        "btn-bins-pos":"🗺️ Bins position",
+        "btn-bins-video":"🎥 Disposal example",
+	"waste-guide-title": "Click below for the recycling guide (Porto San Giorgio)",
+	"waste-guide-link": "📄 Open the guide to separate waste collection",
+        "poster-title":"Waste sorting guide (Porto San Giorgio)",
+        "rules-title":"House rules",
+        "rule-1":"No smoking inside the apartment; smoking is allowed outside only. Use ashtrays.",
+        "rule-2":"Always close the umbrella when you are away, at night or in bad weather.",
+        "rule-3":"Do not throw sanitary products in the toilet (use the dedicated bin).",
+        "rule-4":"No parties or events.",
+        "rule-5":"Please keep quiet during night hours.",
+	"rule-6":"Do not pour water or other liquids onto the barbecue. Always cover with the red cover once you have finished using it and cleaned the grill with the special spatula.",
+        "rule-7":"Waste sorting rules are mandatory.",
+        "footer":"If you need anything, message us. Enjoy your stay!"
+      }
+    };
+
+    const els = document.querySelectorAll("[data-i18n]");
+    const btnIT = document.getElementById("btnIT");
+    const btnEN = document.getElementById("btnEN");
+
+    function setLang(lang){
+      const t = dict[lang];
+      els.forEach(el=>{
+        const key = el.getAttribute("data-i18n");
+        if(t[key]) el.innerHTML = t[key];
+      });
+      btnIT.classList.toggle("active", lang==="it");
+      btnEN.classList.toggle("active", lang==="en");
+      btnIT.setAttribute("aria-pressed", lang==="it");
+      btnEN.setAttribute("aria-pressed", lang==="en");
+      document.documentElement.lang = lang;
+      localStorage.setItem("guest_lang", lang);
+    }
+
+
+    btnIT.addEventListener("click", e=>{e.preventDefault(); setLang("it");});
+    btnEN.addEventListener("click", e=>{e.preventDefault(); setLang("en");});
+    setLang(localStorage.getItem("guest_lang") || "it");
+
+    // Copy Wi-Fi helper
+    document.getElementById("copyWifi").addEventListener("click", (e)=>{
+      e.preventDefault();
+      const text = "Wi-Fi: Giardinoalmare\nPassword: !GM60262929PT!";
+      navigator.clipboard.writeText(text).then(()=>{
+        const old = e.target.textContent;
+        e.target.textContent = (document.documentElement.lang==="en") ? "✅ Copied!" : "✅ Copiato!";
+        setTimeout(()=>{ e.target.textContent = dict[document.documentElement.lang]["btn-copy-wifi"]; },1200);
+      });
+    });
+  </script>
+</body>
+</html>
